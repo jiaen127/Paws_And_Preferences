@@ -39,7 +39,6 @@ class PawsAndPreferences {
         this.resultsScreen = document.getElementById('resultsScreen');
         this.resultsGrid = document.getElementById('resultsGrid');
         this.resultsTitle = document.getElementById('resultsTitle');
-        this.resultsMessage = document.getElementById('resultsMessage');
         this.resultsCount = document.getElementById('resultsCount');
         this.undoContainer = document.getElementById('undoContainer');
         this.undoBtn = document.getElementById('undoBtn');
@@ -365,19 +364,15 @@ class PawsAndPreferences {
         // Set title and message based on liked count
         if (count === 0) {
             this.resultsTitle.textContent = "Oh no!";
-            this.resultsMessage.textContent = "Imagine not liking cats in 2026... couldn't be me";
         }
         else if (count <= 3) {
             this.resultsTitle.textContent = "Pretty Picky!";
-            this.resultsMessage.textContent = "You know what you like!";
         }
         else if (count <= 7) {
             this.resultsTitle.textContent = "Your Purrfect Matches!";
-            this.resultsMessage.textContent = "You're such a cat lover!";
         }
         else {
             this.resultsTitle.textContent = "Ultimate Cat Lover!";
-            this.resultsMessage.textContent = "You literally love ALL the cats!";
         }
         // Render liked cats
         this.renderResults();

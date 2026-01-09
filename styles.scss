@@ -475,7 +475,7 @@ button {
 
 .results-count {
     font-size: 1rem;
-    color: $color-primary;
+    color: $color-accent-soft;
     font-weight: 700;
     animation: fadeIn 0.8s ease 0.3s backwards;
 }
@@ -787,6 +787,48 @@ button {
 @media (max-width: 360px) {
     .results-grid {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+
+// Landscape mode fixes
+@media (orientation: landscape) and (max-height: 600px) {
+    .app-container {
+        padding: $spacing-sm;
+    }
+
+    .app-header {
+        padding: $spacing-sm $spacing-md;
+        margin-bottom: $spacing-sm;
+    }
+
+    .app-title {
+        font-size: 1.5rem;
+    }
+
+    .app-subtitle {
+        font-size: 0.875rem;
+    }
+
+    .instructions {
+        margin-bottom: $spacing-sm;
+        
+        p {
+            font-size: 0.75rem;
+        }
+    }
+
+    .card-stack {
+        max-height: calc(100vh - 280px);
+        min-height: 250px;
+        margin-bottom: $spacing-sm;
+    }
+
+    .action-buttons {
+        margin-bottom: $spacing-sm;
+    }
+
+    .progress-container {
+        margin-bottom: $spacing-sm;
     }
 }
 
