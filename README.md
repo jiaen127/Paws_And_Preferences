@@ -12,6 +12,7 @@ A fun, interactive single-page web app where users can swipe through cat images 
 - **Results Screen**: View all your liked cats in a beautiful grid layout
 - **Keyboard Shortcuts**: Use arrow keys to swipe, Ctrl/Cmd+Z to undo
 - **Responsive Design**: Mobile-first design that works on all screen sizes
+- **Landscape Mode Support**: Optimized for both portrait and landscape orientations
 - **Playful Messages**: Fun feedback based on how many cats you liked
 
 ## 🚀 Getting Started
@@ -123,8 +124,9 @@ Paws_And_Preferences/
 ## 🎉 Fun Details
 
 The app includes playful messages like:
-- "Imagine not liking cats in 2026... couldn't be me" (if you liked 0 cats)
-- "You're such a cat lover!" (if you liked most cats)
+- "Oh no!" (if you liked 0 cats)
+- "Pretty Picky!" (if you liked a few cats)
+- "Your Purrfect Matches!" (if you liked several cats)
 - "Ultimate Cat Lover!" (if you liked almost all cats)
 
 ## 📝 Code Structure
