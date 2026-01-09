@@ -150,6 +150,10 @@ Feel free to fork, modify, and improve this project! Some ideas:
 - Add sound effects
 - Create themed versions (dogs, food, etc.)
 
+## 🤖 GenAI Declaration
+
+This project was developed with assistance from Claude Sonnet 4.5 for reference and idea generation.
+
 ## 📄 License
 
 ISC License - feel free to use this project however you'd like!
