@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Paws & Preferences</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="app-container">
+        
+        <!-- Header -->
+        <header class="app-header">
+            <h1 class="app-title">
+                <svg class="title-icon" viewBox="0 0 24 24" fill="currentColor" width="40" height="40" style="vertical-align: middle; margin-right: 8px;">
+                    <path d="M12 2C11.45 2 11 2.45 11 3C11 3.55 11.45 4 12 4C12.55 4 13 3.55 13 3C13 2.45 12.55 2 12 2M7 7C6.45 7 6 7.45 6 8C6 8.55 6.45 9 7 9C7.55 9 8 8.55 8 8C8 7.45 7.55 7 7 7M17 7C16.45 7 16 7.45 16 8C16 8.55 16.45 9 17 9C17.55 9 18 8.55 18 8C18 7.45 17.55 7 17 7M5.5 11C4.67 11 4 11.67 4 12.5C4 13.33 4.67 14 5.5 14C6.33 14 7 13.33 7 12.5C7 11.67 6.33 11 5.5 11M18.5 11C17.67 11 17 11.67 17 12.5C17 13.33 17.67 14 18.5 14C19.33 14 20 13.33 20 12.5C20 11.67 19.33 11 18.5 11M12 13C8.69 13 6 15.69 6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19C18 15.69 15.31 13 12 13Z"/>
+                </svg>
+                Paws & Preferences
+            </h1>
+            <p class="app-subtitle">Find your purrfect matches!</p>
+        </header>
+
+        <!-- Swipe Screen -->
+        <div class="swipe-screen" id="swipeScreen">
+            <!-- Instructions -->
+            <div class="instructions">
+                <p>
+                    <span class="swipe-icon dislike-icon">←</span>
+                    Swipe left to dislike
+                    <span class="divider">|</span>
+                    Swipe right to like
+                    <span class="swipe-icon like-icon">→</span>
+                </p>
+            </div>
+
+            <!-- Card Stack Container -->
+            <div class="card-stack" id="cardStack">
+                <!-- Cat cards will be dynamically inserted here -->
+            </div>
+
+            <!-- Progress Indicator -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p class="progress-text" id="progressText">1 / 10</p>
+            </div>
+
+            <!-- Action Buttons (fallback for non-touch devices) -->
+            <div class="action-buttons">
+                <button class="action-btn dislike-btn" id="dislikeBtn" aria-label="Dislike">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                <button class="action-btn like-btn" id="likeBtn" aria-label="Like">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Undo Button -->
+            <div class="undo-container" id="undoContainer">
+                <button class="undo-btn" id="undoBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 7v6h6"></path>
+                        <path d="M21 17a9 9 0 00-9-9 9 9 0 00-6 2.3L3 13"></path>
+                    </svg>
+                    <span>Undo</span>
+                </button>
+                <div class="undo-timer" id="undoTimer"></div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div class="results-screen hidden" id="resultsScreen">
+            <div class="results-header">
+                <h2 class="results-title" id="resultsTitle">Your Purrfect Matches!</h2>
+                <p class="results-message" id="resultsMessage">You're such a cat lover!</p>
+                <p class="results-count" id="resultsCount">You liked 0 cats</p>
+            </div>
+
+            <div class="results-grid" id="resultsGrid">
+                <!-- Liked cat cards will be inserted here -->
+            </div>
+
+            <button class="restart-btn" id="restartBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="1 4 1 10 7 10"></polyline>
+                    <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                </svg>
+                Start Over
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>

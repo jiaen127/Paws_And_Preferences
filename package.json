@@ -1,0 +1,27 @@
+{
+  "name": "paws_and_preferences",
+  "version": "1.0.0",
+  "description": "Paws & Preferences - A fun, interactive cat swiping app",
+  "main": "index.html",
+  "scripts": {
+    "build": "sass styles.scss styles.css && tsc",
+    "watch": "sass --watch styles.scss:styles.css & tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiaen127/Paws_And_Preferences.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jiaen127/Paws_And_Preferences/issues"
+  },
+  "homepage": "https://github.com/jiaen127/Paws_And_Preferences#readme",
+  "devDependencies": {
+    "sass": "^1.97.2",
+    "typescript": "^5.9.3"
+  }
+}
